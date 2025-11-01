@@ -2,81 +2,177 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: #f8f8f8;
-    color: #000;
+    background: linear-gradient(135deg,
+            #000000 0%,
+            #1a1a1a 50%,
+            #000000 100%);
+    background-attachment: fixed;
+    color: #f5f5f7;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 15% 50%,
+            rgba(0, 113, 227, 0.08) 0%,
+            transparent 50%),
+        radial-gradient(circle at 85% 30%,
+            rgba(110, 49, 247, 0.08) 0%,
+            transparent 50%);
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+/* Ensure content stays above gradient overlay */
+.navbar {
+    position: relative;
+    z-index: 1;
 }
 
 /* Navbar */
 .navbar {
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
+    background: rgba(28, 28, 30, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    padding: 12px 32px;
+    position: fixed;
+    top: 20px;
     z-index: 100;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid #424245;
+    transition: all 0.3s ease;
+    gap: 24px;
+}
+
+.navbar:hover {
+    border-color: #424245;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-    color: #c49a2a;
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
 
+.logo img {
+    height: 80px;
+    width: 80px;
+    display: block;
 }
 
 .search-bar {
     flex: 1;
     display: flex;
     align-items: center;
-    margin: 0 40px;
     max-width: 500px;
-    background-color: #fff;
-    border-radius: 30px;
+    min-width: 200px;
+    background: rgba(44, 44, 46, 0.8);
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #c49a2a;
+    border: 1px solid #424245;
+    transition: all 0.2s ease;
+}
+
+.search-bar:focus-within {
+    border-color: #9333EA;
+    box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.1);
 }
 
 .search-bar input {
     border: none;
-    padding: 10px 15px;
+    padding: 8px 16px;
     width: 100%;
+    height: 40px;
     outline: none;
-    font-size: 15px;
+    font-size: 17px;
+    background: transparent;
+    color: #f5f5f7;
+    letter-spacing: -0.022em;
+    line-height: 40px;
+}
+
+.search-bar input::placeholder {
+    color: #86868b;
 }
 
 .search-bar button {
-    background-color: #c49a2a;
+    background: linear-gradient(135deg, #9333EA 0%, #7C3AED 100%);
     border: none;
-    padding: 10px 20px;
+    padding: 0 24px;
+    height: 40px;
     cursor: pointer;
-    color: #fff;
-    font-weight: bold;
-    transition: background 0.3s;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    line-height: 40px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(147, 51, 234, 0.2);
+    white-space: nowrap;
 }
 
 .search-bar button:hover {
-    background-color: #a5821f;
+    background: linear-gradient(135deg, #A855F7 0%, #8B5CF6 100%);
+    transform: scale(0.98);
+    box-shadow: 0 2px 15px rgba(147, 51, 234, 0.3);
 }
 
 .nav-icons {
     display: flex;
-    gap: 25px;
+    gap: 20px;
+    align-items: center;
+    height: 40px;
+    flex-shrink: 0;
 }
 
 .nav-icons a {
     text-decoration: none;
-    color: #c49a2a;
-    font-size: 20px;
-    transition: 0.3s;
+    color: #f5f5f7;
+    font-size: 24px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 .nav-icons a:hover {
-    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+/* Ensure profile icon is vertically centered */
+.nav-icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
