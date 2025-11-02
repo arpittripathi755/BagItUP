@@ -647,12 +647,10 @@ body::after {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    filter: invert(65%) sepia(75%) saturate(1066%) hue-rotate(331deg) brightness(101%) contrast(96%);
     transition: all 0.2s ease;
 }
 
 .cart-icon:hover {
-    filter: invert(71%) sepia(52%) saturate(5437%) hue-rotate(339deg) brightness(102%) contrast(101%);
     transform: scale(0.98);
 }
 
@@ -681,4 +679,228 @@ body::after {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+/* Hero Section with Website Title - Centered on Page */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    position: relative;
+    padding: 4rem 2rem;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Center Title Container */
+.center-title {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.website-title {
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #FFD54F, #FFB75E, #FF5722, #FFC107, #FF7A00, #FFD54F);
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: colorChange 12s ease-in-out infinite;
+    text-shadow: 
+        0 0 8px rgba(242, 153, 74, 0.4),
+        0 0 12px rgba(255, 127, 80, 0.3),
+        inset 0 0 15px rgba(242, 153, 74, 0.2);
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(242, 153, 74, 0.25));
+}
+
+.title-accent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center,
+        rgba(242, 153, 74, 0.06) 0%,
+        rgba(255, 127, 80, 0.04) 30%,
+        transparent 55%);
+    filter: blur(15px);
+    z-index: 1;
+    animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+}
+
+/* Product Showcase Cards */
+.product-showcase-card {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 122, 0, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(255, 122, 0, 0.15),
+        0 0 20px rgba(255, 213, 79, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.product-showcase-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 122, 0, 0.5);
+    box-shadow: 
+        0 12px 40px rgba(255, 122, 0, 0.25),
+        0 0 30px rgba(255, 213, 79, 0.2);
+}
+
+.image-rotator {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.rotating-image {
+    position: absolute;
+    top: 7.5%;
+    left: 7.5%;
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.rotating-image.active {
+    opacity: 1;
+}
+
+/* Specific styling for black image to make it larger */
+.rotating-image.black-image-large {
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #666666;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.nav-arrow:hover {
+    background: transparent;
+    transform: translateY(-50%) scale(1.2);
+    color: #333333;
+}
+
+.nav-arrow-left {
+    left: 5px;
+}
+
+.nav-arrow-right {
+    right: 5px;
+}
+
+/* Show arrows on card hover */
+.product-showcase-card:hover .nav-arrow {
+    opacity: 1;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 1200px) {
+    .hero-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .product-showcase-card {
+        flex: none;
+        width: 280px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .website-title {
+        font-size: 4rem;
+    }
+    
+    .hero-section {
+        min-height: 50vh;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .product-showcase-card {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .website-title {
+        font-size: 3rem;
+    }
+    
+    .product-showcase-card {
+        width: 220px;
+        height: 260px;
+    }
 }

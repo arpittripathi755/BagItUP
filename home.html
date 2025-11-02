@@ -24,7 +24,7 @@
                 <button><img src="images/searchicon.png" alt="Search" class="search-icon"></button>
             </div>
             <div class="nav-icons">
-                <a href="addtocart.html"><span><img src="images/addtocart.png" class="cart-icon"
+                <a href="addtocart.html"><span><img src="images/addorange-removebg-preview.png" class="cart-icon"
                             alt="Cart" /></span></a>
                 <a href="login.html" class="sign-in-btn">Sign In</a>
             </div>
@@ -99,9 +99,43 @@
     </div>
 
     <main class="content">
-        <!-- Main content will go here -->
+        <!-- Hero Section with Website Name -->
+        <div class="hero-section">
+            <!-- Left Product Card -->
+            <div class="product-showcase-card left-card">
+                <div class="image-rotator" id="left-rotator">
+                    <img src="images/beige-removebg-preview.png" alt="Beige Product" class="rotating-image active">
+                    <img src="images/black-removebg-preview.png" alt="Black Product" class="rotating-image black-image-large">
+                    <img src="images/blue-removebg-preview.png" alt="Blue Product" class="rotating-image">
+                    <img src="images/maroon-removebg-preview.png" alt="Maroon Product" class="rotating-image">
+                    <img src="images/shirt-removebg-preview.png" alt="Shirt Product" class="rotating-image">
+                    <button class="nav-arrow nav-arrow-left" data-rotator="left-rotator" data-direction="prev">‹</button>
+                    <button class="nav-arrow nav-arrow-right" data-rotator="left-rotator" data-direction="next">›</button>
+                </div>
+            </div>
+
+            <!-- Center Title -->
+            <div class="center-title">
+                <h1 class="website-title">BagItUp</h1>
+                <div class="title-accent"></div>
+            </div>
+
+            <!-- Right Product Card -->
+            <div class="product-showcase-card right-card">
+                <div class="image-rotator" id="right-rotator">
+                    <img src="images/placeholder-right1.jpg" alt="Product 1" class="rotating-image active">
+                    <img src="images/placeholder-right2.jpg" alt="Product 2" class="rotating-image">
+                    <img src="images/placeholder-right3.jpg" alt="Product 3" class="rotating-image">
+                    <img src="images/placeholder-right4.jpg" alt="Product 4" class="rotating-image">
+                    <img src="images/placeholder-right5.jpg" alt="Product 5" class="rotating-image">
+                    <button class="nav-arrow nav-arrow-left" data-rotator="right-rotator" data-direction="prev">‹</button>
+                    <button class="nav-arrow nav-arrow-right" data-rotator="right-rotator" data-direction="next">›</button>
+                </div>
+            </div>
+        </div>
     </main>
     <script defer src="home.js"></script>
+    <script defer src="image-rotator.js"></script>
 </body>
 
 </html>

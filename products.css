@@ -238,12 +238,11 @@ body::after {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    filter: invert(1) brightness(1);
-    transition: filter 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .cart-icon:hover {
-    filter: invert(1) brightness(0.8);
+    transform: scale(0.98);
 }
 
 .sign-in-btn {
@@ -375,11 +374,11 @@ body::after {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px rgba(192, 192, 192, 0.8);
+    -webkit-text-stroke: 1px rgba(192, 192, 192, 0.6);
     text-shadow: 
-        0 0 5px rgba(245, 245, 245, 0.6),
-        1px 1px 2px rgba(169, 169, 169, 0.4);
-    filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.3));
+        0 0 3px rgba(245, 245, 245, 0.4),
+        1px 1px 1px rgba(169, 169, 169, 0.3);
+    filter: drop-shadow(0 0 4px rgba(192, 192, 192, 0.2));
 }
 
 .product-image {
@@ -415,26 +414,29 @@ body::after {
     transform: scale(1.15);  /* Make both images 15% larger by default */
 }
 
-/* Specific styling for the polo t-shirt */
-.product-image-polo {
-    height: 280px;  /* Further increased height */
-    padding: 5px;   /* Reduced padding to allow more space for the image */
+/* Specific styling for the polo t-shirt and t-shirt 4 */
+.product-image-polo,
+.product-image-tshirt4 {
+    height: 240px;  /* Same as standard product image */
+    padding: 10px;  /* Same as standard product image */
 }
 
-.product-image-polo img {
-    max-width: 100%;  /* Allow image to use more width */
-    max-height: 100%; /* Allow image to use more height */
-    transform: scale(1.1);  /* Make the image 10% larger by default */
+.product-image-polo img,
+.product-image-tshirt4 img {
+    max-width: 95%;   /* Same as standard product image */
+    max-height: 95%;  /* Same as standard product image */
+    transform: scale(1.15);  /* Make images 15% larger while keeping container same size */
 }
 
 .product-card:hover .product-image img {
     transform: scale(1.05);
 }
 
-/* Specific hover effect for v-neck and polo t-shirts */
+/* Specific hover effect for v-neck, polo and t-shirt 4 */
 .product-card:hover .product-image-vneck img,
-.product-card:hover .product-image-polo img {
-    transform: scale(1.2);  /* Larger scale on hover for both */
+.product-card:hover .product-image-polo img,
+.product-card:hover .product-image-tshirt4 img {
+    transform: scale(1.25);  /* Scale up from the already larger base size */
 }
 
 .product-name {
@@ -610,6 +612,30 @@ body::after {
     .search-bar {
         min-width: 150px;
     }
-    
+}
 
+/* Coming Soon Styles */
+.coming-soon-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.coming-soon-title {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .coming-soon-title {
+        font-size: 2.5rem;
+    }
 }
