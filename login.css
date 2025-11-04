@@ -63,6 +63,28 @@ body::before {
     border-color: rgba(242, 153, 74, 0.3);
 }
 
+.back-to-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2994A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.back-to-home-btn:hover {
+    color: #FFB75E;
+    background: rgba(242, 153, 74, 0.1);
+    transform: translateX(-2px);
+}
+
 .logo {
     font-size: 32px;
     font-weight: 600;
