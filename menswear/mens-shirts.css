@@ -1,3 +1,4 @@
+/* Menswear Category Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +8,9 @@
 }
 
 body {
-    background: linear-gradient(135deg,
-            #0a0a0a 0%,
-            #1a1a1a 50%,
-            #0a0a0a 100%);
+    background: linear-gradient(135deg, #c8d8e4 0%, #b8c9d9 50%, #a8b9c9 100%);
     background-attachment: fixed;
-    color: #f5f5f7;
+    color: #1a1a1a;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -28,10 +26,10 @@ body::before {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 15% 50%,
-            rgba(242, 153, 74, 0.08) 0%,
+            rgba(255, 255, 255, 0.05) 0%,
             transparent 50%),
         radial-gradient(circle at 85% 30%,
-            rgba(255, 127, 80, 0.08) 0%,
+            rgba(255, 255, 255, 0.05) 0%,
             transparent 50%);
     background-attachment: fixed;
     z-index: 0;
@@ -47,9 +45,9 @@ body::after {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(147, 51, 234, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.02) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
     z-index: 0;
     pointer-events: none;
     animation: gentleShift 12s ease-in-out infinite reverse;
@@ -107,24 +105,24 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(18, 18, 18, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     padding: 12px 32px;
     border-radius: 18px;
     position: relative;
     isolation: isolate;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(192, 192, 192, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     gap: 24px;
 }
 
 .navbar:hover {
-    border-color: rgba(192, 192, 192, 0.3);
+    border-color: rgba(0, 0, 0, 0.2);
     box-shadow:
-        0 12px 36px rgba(0, 0, 0, 0.3),
-        0 0 15px rgba(192, 192, 192, 0.15);
+        0 12px 36px rgba(0, 0, 0, 0.15),
+        0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -140,8 +138,8 @@ body::after {
 }
 
 .logo img {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     display: block;
     transition: transform 0.2s ease;
 }
@@ -156,16 +154,16 @@ body::after {
     align-items: center;
     max-width: 500px;
     min-width: 200px;
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(192, 192, 192, 0.2);
+    border: 3px solid rgba(0, 0, 0, 0.1);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar:focus-within {
-    border-color: rgba(192, 192, 192, 0.4);
-    box-shadow: 0 0 0 4px rgba(192, 192, 192, 0.1);
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .search-bar input {
@@ -176,18 +174,18 @@ body::after {
     outline: none;
     font-size: 17px;
     background: transparent;
-    color: #f5f5f7;
+    color: #1a1a1a;
     letter-spacing: -0.022em;
     line-height: 40px;
     margin-right: 4px;
 }
 
 .search-bar input::placeholder {
-    color: #86868b;
+    color: #666666;
 }
 
 .search-bar button {
-    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 100%);
+    background: #1a1a1a;
     border: none;
     padding: 0 24px;
     height: 40px;
@@ -197,13 +195,13 @@ body::after {
     align-items: center;
     justify-content: center;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 10px rgba(242, 153, 74, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar button:hover {
-    background: linear-gradient(135deg, #FF7F50 0%, #F2994A 100%);
+    background: #000000;
     transform: scale(0.98);
-    box-shadow: 0 2px 15px rgba(242, 153, 74, 0.3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .search-icon {
@@ -227,7 +225,7 @@ body::after {
 
 .nav-icons a {
     text-decoration: none;
-    color: #f5f5f7;
+    color: #1a1a1a;
     font-size: 24px;
     transition: all 0.2s ease;
     display: flex;
@@ -238,7 +236,7 @@ body::after {
 }
 
 .nav-icons a:not(.sign-in-btn):hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .cart-icon {
@@ -253,7 +251,7 @@ body::after {
 }
 
 .sign-in-btn {
-    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 100%);
+    background: #1a1a1a;
     border: none;
     padding: 8px 16px !important;
     height: 40px;
@@ -261,14 +259,15 @@ body::after {
     font-weight: 500;
     border-radius: 12px;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 10px rgba(242, 153, 74, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     margin-left: 8px;
+    color: white !important;
 }
 
 .sign-in-btn:hover {
-    background: linear-gradient(135deg, #FF7F50 0%, #F2994A 100%);
+    background: #000000;
     transform: scale(0.98);
-    box-shadow: 0 2px 15px rgba(242, 153, 74, 0.3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .nav-icons span {
@@ -296,17 +295,9 @@ body::after {
 .page-title {
     font-size: 3.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 50%, #F2994A 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #1a1a1a;
     margin-bottom: 16px;
     letter-spacing: -0.025em;
-    -webkit-text-stroke: 1px rgba(242, 153, 74, 0.8);
-    text-shadow:
-        0 0 5px rgba(255, 127, 80, 0.6),
-        1px 1px 2px rgba(242, 153, 74, 0.4);
-    filter: drop-shadow(0 0 8px rgba(242, 153, 74, 0.3));
 }
 
 .product-price {
@@ -321,7 +312,7 @@ body::after {
 
 .page-subtitle {
     font-size: 1.25rem;
-    color: #86868b;
+    color: #666666;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
@@ -342,12 +333,12 @@ body::after {
 }
 
 .product-card {
-    background: rgba(18, 18, 18, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 16px;
     padding: 24px;
-    border: 1px solid rgba(242, 153, 74, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.2s cubic-bezier(0.33, 1, 0.68, 1);
     cursor: pointer;
     position: relative;
@@ -357,12 +348,11 @@ body::after {
 
 .product-card:hover {
     transform: translateY(-8px) scale(1.03);
-    border-color: rgba(192, 192, 192, 0.4);
+    border-color: rgba(0, 0, 0, 0.2);
     border-width: 1px;
     box-shadow:
-        0 25px 50px rgba(0, 0, 0, 0.5),
-        0 0 25px rgba(192, 192, 192, 0.3),
-        0 0 40px rgba(192, 192, 192, 0.2);
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 0 25px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
@@ -377,15 +367,7 @@ body::after {
 }
 
 .product-card:hover .product-name {
-    background: linear-gradient(135deg, #E5E5E5 0%, #C0C0C0 50%, #F5F5F5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px rgba(192, 192, 192, 0.6);
-    text-shadow:
-        0 0 3px rgba(245, 245, 245, 0.4),
-        1px 1px 1px rgba(169, 169, 169, 0.3);
-    filter: drop-shadow(0 0 4px rgba(192, 192, 192, 0.2));
+    color: #000000;
 }
 
 .product-image {
@@ -395,7 +377,7 @@ body::after {
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
-    background: #ffffff;
+    background: #575757;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,7 +440,7 @@ body::after {
 .product-name {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #f5f5f7;
+    color: #1a1a1a;
     margin-bottom: 8px;
     line-height: 1.4;
 }
@@ -466,23 +448,20 @@ body::after {
 .product-price {
     font-size: 1.25rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #50C878 0%, #3AA861 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #1a1a1a;
     margin-bottom: 12px;
 }
 
 .product-description {
     font-size: 0.875rem;
-    color: #86868b;
+    color: #666666;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
 .add-to-cart-btn {
     width: 100%;
-    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 100%);
+    background: #1a1a1a;
     border: none;
     padding: 12px 16px;
     border-radius: 12px;
@@ -491,15 +470,15 @@ body::after {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 10px rgba(242, 153, 74, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
 }
 
 .add-to-cart-btn:hover {
-    background: linear-gradient(135deg, #FF7F50 0%, #F2994A 100%);
+    background: #000000;
     transform: scale(0.98);
-    box-shadow: 0 2px 15px rgba(242, 153, 74, 0.3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Back to Home Button */
@@ -507,21 +486,21 @@ body::after {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 100%);
+    background: #1a1a1a;
     color: white;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 50px;
     font-weight: 500;
-    box-shadow: 0 4px 15px rgba(242, 153, 74, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
     z-index: 1001;
 }
 
 .back-home:hover {
-    background: linear-gradient(135deg, #FF7F50 0%, #F2994A 100%);
+    background: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(242, 153, 74, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Button Animation */
@@ -546,10 +525,10 @@ body::after {
 }
 
 .add-to-cart-btn.clicked {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+    background: #000000 !important;
     pointer-events: none;
     transform: scale(0.98);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -572,13 +551,9 @@ body::after {
     transform: translate(-100%, -50%);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.45, 0, 0.55, 1), opacity 0.3s ease;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
     font-size: 1.5em;
     font-weight: 800;
-    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5));
 }
 
 .add-to-cart-btn.clicked .button-text {
@@ -641,10 +616,7 @@ body::after {
 .coming-soon-title {
     font-size: 4rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #F2994A 0%, #FF7F50 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #1a1a1a;
     margin: 0;
     letter-spacing: -0.02em;
 }

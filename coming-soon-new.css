@@ -1,0 +1,263 @@
+/* VEXO-Style Coming Soon Page for BagItUp */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #c8d8e4 0%, #b8c9d9 50%, #a8b9c9 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Navbar Container */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 40px;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #1a1a1a;
+    background: white;
+}
+
+.search-bar button {
+    background: #1a1a1a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button:hover {
+    background: #000000;
+    transform: scale(1.05);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.sign-in-btn {
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background: #000000;
+    transform: scale(1.05);
+}
+
+/* Page Container */
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 40px 80px;
+}
+
+/* Coming Soon Content */
+.coming-soon-content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 80px 100px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.coming-soon-title {
+    font-size: 72px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Back to Home Button */
+.back-home {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.back-home:hover {
+    background-color: #000000;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .search-bar {
+        max-width: 400px;
+        margin: 0 30px;
+    }
+
+    .coming-soon-content {
+        padding: 60px 80px;
+    }
+
+    .coming-soon-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        border-radius: 30px;
+    }
+
+    .search-bar {
+        max-width: 300px;
+        margin: 0 20px;
+    }
+
+    .search-bar input {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .coming-soon-content {
+        padding: 50px 60px;
+    }
+
+    .coming-soon-title {
+        font-size: 48px;
+    }
+
+    .back-home {
+        bottom: 30px;
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 15px 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .coming-soon-content {
+        padding: 40px 30px;
+    }
+
+    .coming-soon-title {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+
+    .page-container {
+        padding: 80px 20px 60px;
+    }
+}
