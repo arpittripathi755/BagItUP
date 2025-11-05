@@ -255,11 +255,11 @@ body {
     .navbar-container {
         padding: 15px 20px;
     }
-    
+
     .page-container {
         padding: 30px 20px 80px;
     }
-    
+
     .products-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 20px;
@@ -271,15 +271,15 @@ body {
         margin: 0 20px;
         max-width: 300px;
     }
-    
+
     .page-title {
         font-size: 36px;
     }
-    
+
     .products-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-    
+
     .back-home {
         bottom: 20px;
         left: 20px;
@@ -291,16 +291,16 @@ body {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .search-bar {
         max-width: 100%;
         margin: 0;
     }
-    
+
     .page-title {
         font-size: 28px;
     }
-    
+
     .products-grid {
         grid-template-columns: 1fr;
     }

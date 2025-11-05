@@ -39,6 +39,66 @@
         </div>
         <a href="home.html" class="back-to-home-btn">← Back to Home</a>
     </div>
+    <script type="module" defer>
+        // Import Firebase libraries
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged }
+            from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+        // 🔹 Replace this with your own config from Firebase Console
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_1VN-RVkmuLN0kor2h1Qp2xqf9KziHQ8",
+            authDomain: "bagitup-465b7.firebaseapp.com",
+            projectId: "bagitup-465b7",
+            storageBucket: "bagitup-465b7.firebasestorage.app",
+            messagingSenderId: "300945011227",
+            appId: "1:300945011227:web:984bd25aee7d2ca5bafebe",
+            measurementId: "G-7P9FX0RKKV"
+        };
+
+
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        // Find your Google button
+        const googleBtn = document.querySelector(".google-btn");
+
+        // Handle sign in
+        googleBtn.addEventListener("click", () => {
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    const user = result.user;
+                    console.log("✅ Logged in as:", user.displayName);
+
+                    // Optional: save user info locally
+                    localStorage.setItem("bagitup-user", JSON.stringify({
+                        name: user.displayName,
+                        email: user.email,
+                        photo: user.photoURL,
+                        uid: user.uid
+                    }));
+
+                    // Redirect after login
+                    window.location.href = "home.html"; // change to your actual home page
+                })
+                .catch((error) => {
+                    console.error("❌ Login failed:", error.message);
+                    alert("Google sign-in failed. Please try again.");
+                });
+        });
+
+        // Optional: auto-redirect if already signed in
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log(user)
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>
