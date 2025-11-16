@@ -36,20 +36,24 @@ body {
 
 .logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    font-size: 28px;
-    font-weight: 700;
-    color: #1a1a1a;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    gap: 8px;
+    margin-bottom: 14px;
 }
 
-.logo img {
-    height: 40px;
+.logo-img {
+    height: 64px; /* increased size */
     width: auto;
     filter: brightness(0) saturate(100%);
+}
+
+.brand {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 1px;
 }
 
 .login-box h2 {
