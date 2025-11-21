@@ -187,7 +187,7 @@ body {
 
 .testimonial-text {
   color: #4a4a4a;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   max-width: 280px;
 }
@@ -205,17 +205,17 @@ body {
 
 .hero-model-image {
   position: absolute;
-  bottom: -210px;
+  bottom: -230px;
   left: 50%;
   transform: translateX(-50%);
-  height: 380px;
+  height: 390px;
   width: auto;
   z-index: 1;
   pointer-events: none;
 }
 
 .hero-title {
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.1;
   color: #1a1a1a;
