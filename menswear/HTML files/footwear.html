@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footwear | BagItUp</title>
-    <link rel="stylesheet" href="footwear.css">
-    <script defer src="../products.js"></script>
+    <link rel="stylesheet" href="./CSS Files/footwear.css">
+
 </head>
 
 <body>
     <div class="navbar-container">
         <nav class="navbar">
-            <div class="logo"><a href="../home.html"><img src="../images/newlogo-removebg-preview (2).png"
+            <div class="logo"><a href="../../home.html"><img src="../../images/newlogo-removebg-preview (2).png"
                         alt="Logo" /></a></div>
             <div class="search-bar">
                 <input type="text" id="search" placeholder="Search footwear...">
-                <button><img src="../images/searchicon.png" alt="Search" class="search-icon"></button>
+                <button><img src="../../images/searchicon.png" alt="Search" class="search-icon"></button>
             </div>
             <div class="nav-icons">
-                <a href="../addtocart.html"><span><img src="../images/addorange-removebg-preview.png" class="cart-icon"
+                <a href="../../addtocart.html"><span><img src="../../images/addtocart.png" class="cart-icon"
                             alt="Cart" /></span></a>
-                <a href="../login.html" class="sign-in-btn">Sign In</a>
+                <a href="../../login.html" class="sign-in-btn">Sign In</a>
             </div>
         </nav>
     </div>
@@ -42,6 +42,11 @@
                     <div class="product-price">₹2,499</div>
                     <p class="product-description">Comfortable sneakers for everyday wear. Perfect blend of style and
                         comfort.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -56,6 +61,11 @@
                     <div class="product-price">₹2,999</div>
                     <p class="product-description">Elegant formal shoes for business meetings. Professional and
                         polished.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -69,6 +79,11 @@
                     <h3 class="product-name">Loafers</h3>
                     <div class="product-price">₹2,299</div>
                     <p class="product-description">Slip-on loafers for casual elegance. Versatile and comfortable.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -82,6 +97,11 @@
                     <h3 class="product-name">Leather Boots</h3>
                     <div class="product-price">₹3,499</div>
                     <p class="product-description">Rugged leather boots for all seasons. Durable and stylish.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -95,6 +115,11 @@
                     <h3 class="product-name">Running Shoes</h3>
                     <div class="product-price">₹2,799</div>
                     <p class="product-description">Performance running shoes with cushioned sole. Built for athletes.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -108,6 +133,11 @@
                     <h3 class="product-name">Casual Sandals</h3>
                     <div class="product-price">₹1,299</div>
                     <p class="product-description">Comfortable sandals for relaxed days. Lightweight and breathable.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -117,7 +147,9 @@
         </div>
     </div>
 
-    <a href="../home.html" class="back-home">← Back to Home</a>
+    <a href="../../home.html" class="back-home">← Back to Home</a>
+    <script src="../quantity.js"></script>
+    <script src="../cartbutton.js"></script>
 </body>
 
 </html>

@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men's T-Shirts | BagItUp</title>
-    <link rel="stylesheet" href="mens-tshirts.css">
-    <script defer src="../products.js"></script>
+    <link rel="stylesheet" href="./CSS Files/mens-tshirts.css">
+
 </head>
 
 <body>
     <div class="navbar-container">
         <nav class="navbar">
-            <div class="logo"><a href="../home.html"><img src="../images/newlogo-removebg-preview (2).png"
+            <div class="logo"><a href="../../home.html"><img src="../../images/newlogo-removebg-preview (2).png"
                         alt="Logo" /></a></div>
             <div class="search-bar">
                 <input type="text" id="search" placeholder="Search eco-friendly t-shirts...">
-                <button><img src="../images/searchicon.png" alt="Search" class="search-icon"></button>
+                <button><img src="../../images/searchicon.png" alt="Search" class="search-icon"></button>
             </div>
             <div class="nav-icons">
-                <a href="../addtocart.html"><span><img src="../images/addorange-removebg-preview.png" class="cart-icon"
+                <a href="../../addtocart.html"><span><img src="../../images/addtocart.png" class="cart-icon"
                             alt="Cart" /></span></a>
-                <a href="../login.html" class="sign-in-btn">Sign In</a>
+                <a href="../../login.html" class="sign-in-btn">Sign In</a>
             </div>
         </nav>
     </div>
@@ -43,6 +43,11 @@
                     <div class="product-price">₹899</div>
                     <p class="product-description">Classic crew neck t-shirt made from premium organic cotton. Perfect
                         for everyday comfort and style.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -57,6 +62,11 @@
                     <div class="product-price">₹999</div>
                     <p class="product-description">Sleek v-neck design crafted from soft, sustainable cotton blend.
                         Perfect for a modern, casual look.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -71,6 +81,11 @@
                     <div class="product-price">₹1,299</div>
                     <p class="product-description">Premium polo shirt with classic collar design. Made from breathable,
                         eco-friendly materials.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -85,6 +100,11 @@
                     <div class="product-price">₹1,199</div>
                     <p class="product-description">Stylish henley with button placket detail. Made from soft,
                         sustainable fabric for all-day comfort.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -97,6 +117,11 @@
                     <div class="product-price">₹1,099</div>
                     <p class="product-description">Athletic raglan sleeve design. Perfect for sports and casual wear
                         with enhanced mobility.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -109,6 +134,11 @@
                     <div class="product-price">₹1,399</div>
                     <p class="product-description">Contemporary oversized fit with dropped shoulders. Perfect for a
                         modern streetwear look.</p>
+                    <div class="quantity-control">
+                        <button class="quantity-decrease">−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-increase">+</button>
+                    </div>
                     <button class="add-to-cart-btn">
                         <span class="button-text">Add to Cart</span>
                         <span class="tick-mark">✓</span>
@@ -118,7 +148,9 @@
         </div>
     </div>
 
-    <a href="../home.html" class="back-home">← Back to Home</a>
+    <a href="../../home.html" class="back-home">← Back to Home</a>
+    <script src="../quantity.js"></script>
+    <script src="../cartbutton.js"></script>
 </body>
 
 </html>

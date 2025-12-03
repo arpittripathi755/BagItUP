@@ -240,14 +240,18 @@ body::after {
 }
 
 .cart-icon {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     transition: all 0.2s ease;
+    background: #000000;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 .cart-icon:hover {
-    transform: scale(0.98);
+    transform: scale(1.05);
+    background: #1a1a1a;
 }
 
 .sign-in-btn {
@@ -448,7 +452,7 @@ body::after {
 .product-price {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #2ecc71;
     margin-bottom: 12px;
 }
 
@@ -457,6 +461,57 @@ body::after {
     color: #666666;
     line-height: 1.5;
     margin-bottom: 20px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.quantity-decrease,
+.quantity-increase {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #1a1a1a;
+    background: white;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    padding: 0;
+    line-height: 1;
+}
+
+.quantity-decrease:hover,
+.quantity-increase:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: scale(1.05);
+}
+
+.quantity-decrease:active,
+.quantity-increase:active {
+    transform: scale(0.95);
+}
+
+.quantity-display {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    min-width: 30px;
+    text-align: center;
 }
 
 .add-to-cart-btn {
