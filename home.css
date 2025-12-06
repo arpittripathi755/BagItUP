@@ -18,38 +18,13 @@ body {
 /* Hero Container */
 .hero-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #c8d8e4 0%, #b8c9d9 50%, #a8b9c9 100%);
+  /* background: linear-gradient(135deg, #c8d8e4 0%, #b8c9d9 50%, #a8b9c9 100%);
+   */background-color: #a8b9c9;
   padding: 30px 60px 60px;
   border-radius: 40px 40px 0 0;
   position: relative;
   margin: 0 20px 0;
   overflow: visible;
-}
-
-/* Curved Cutout at Top */
-.hero-container::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 28%;
-  height: 60px;
-  background: #e8e8e8;
-  border-radius: 0 0 100px 100px;
-  z-index: 1;
-}
-
-.hero-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: linear-gradient(135deg, #c8d8e4 0%, #b8c9d9 50%, #a8b9c9 100%);
-  border-radius: 40px 40px 0 0;
-  z-index: 0;
 }
 
 /* Top Navigation */
@@ -97,7 +72,7 @@ body {
 
 .brand-logo {
   position: absolute;
-  top: -30px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;

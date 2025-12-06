@@ -12,7 +12,7 @@ for (var i = 0; i < productCards.length; i++) {
     // Decrease button
     decreaseBtn.onclick = function() {
         var display = this.parentElement.querySelector('.quantity-display');
-        var number = parseInt(display.textContent);
+        var number = Number(display.textContent);
         number = Math.max(1, number - 1);
         display.textContent = number;
     };
@@ -20,23 +20,10 @@ for (var i = 0; i < productCards.length; i++) {
     // Increase button
     increaseBtn.onclick = function() {
         var display = this.parentElement.querySelector('.quantity-display');
-        var number = parseInt(display.textContent);
+        var number = Number(display.textContent);
         number = Math.min(99, number + 1);
         display.textContent = number;
     };
 }
 
-// Add to cart buttons
-var addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
-for (var i = 0; i < addToCartButtons.length; i++) {
-    var button = addToCartButtons[i];
-    
-    button.onclick = function() {
-        var card = this.parentElement;
-        var quantityDisplay = card.querySelector('.quantity-display');
-        var quantity = parseInt(quantityDisplay.textContent);
-        
-        alert('Added ' + quantity + ' item(s) to cart');
-    };
-}
