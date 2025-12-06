@@ -1,7 +1,7 @@
-// Get all product cards
+
 var productCards = document.querySelectorAll('.product-card');
 
-// Loop through each product card
+
 for (var i = 0; i < productCards.length; i++) {
     var card = productCards[i];
     
@@ -9,7 +9,7 @@ for (var i = 0; i < productCards.length; i++) {
     var increaseBtn = card.querySelector('.quantity-increase');
     var display = card.querySelector('.quantity-display');
     
-    // Decrease button
+
     decreaseBtn.onclick = function() {
         var display = this.parentElement.querySelector('.quantity-display');
         var number = Number(display.textContent);
@@ -17,7 +17,7 @@ for (var i = 0; i < productCards.length; i++) {
         display.textContent = number;
     };
     
-    // Increase button
+
     increaseBtn.onclick = function() {
         var display = this.parentElement.querySelector('.quantity-display');
         var number = Number(display.textContent);
